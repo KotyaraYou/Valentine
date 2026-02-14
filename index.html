@@ -1,0 +1,244 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffe6f0, #ffb6c1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 40px;
+            box-shadow: 0 20px 40px rgba(214, 51, 132, 0.3);
+            padding: 2rem 3rem;
+            max-width: 600px;
+            width: 90%;
+            backdrop-filter: blur(5px);
+            border: 2px solid #ff99bb;
+        }
+
+        h1 {
+            color: #d63384;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.3);
+        }
+
+        .question {
+            font-size: 2rem;
+            color: #b3245c;
+            margin-bottom: 2rem;
+            font-weight: bold;
+        }
+
+        .gif-container {
+            margin: 2rem 0;
+            background: #fff0f5;
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: inset 0 0 15px #ffc0cb;
+        }
+
+        .gif-container img {
+            max-width: 100%;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .gif-container img:hover {
+            transform: scale(1.02);
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            align-items: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-yes, .btn-no {
+            font-size: 1.8rem;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-yes {
+            background: linear-gradient(45deg, #ff4d6d, #ff1493);
+            color: white;
+            border: 2px solid #fff;
+        }
+
+        .btn-yes:hover {
+            background: linear-gradient(45deg, #ff3355, #ff007f);
+            transform: scale(1.1) rotate(2deg);
+            box-shadow: 0 15px 25px #ff4d6d;
+        }
+
+        .btn-no {
+            background: linear-gradient(45deg, #a9a9a9, #696969);
+            color: white;
+        }
+
+        .btn-no:hover {
+            background: linear-gradient(45deg, #808080, #505050);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .response-message {
+            margin-top: 2rem;
+            font-size: 2.5rem;
+            color: #d63384;
+            font-weight: bold;
+            animation: heartbeat 1.5s ease infinite;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            14% { transform: scale(1.3); }
+            28% { transform: scale(1); }
+            42% { transform: scale(1.3); }
+            70% { transform: scale(1); }
+        }
+
+        .small-note {
+            margin-top: 1rem;
+            color: #ff69b4;
+            font-size: 1rem;
+            font-style: italic;
+        }
+
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="card" id="step1">
+        <h1>💘💘💘💘💘💘💘</h1>
+        <div class="question">Will you be my valentine?</div>
+        
+        <div class="gif-container">
+            <!--  -->
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnltdHBoN2FhaTVkMWMyeHoxc3h2YzEwaGo5emVqb2I2NWRuZTd2aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uaJW5HM7eWAvhoj0pZ/giphy.gif" 
+                 alt="">
+            <p style="color:#ff69b4; margin-top:10px;">💖💖💖💖💖💖💖</p>
+        </div>
+
+        <div class="buttons">
+            <button class="btn-yes" id="yesBtn">Yes 💖</button>
+            <button class="btn-no" id="noBtn">No 💔</button>
+        </div>
+        <div class="small-note">FOR MY LOVE 💖</div>
+    </div>
+
+    <div class="card hidden" id="step2">
+        <h1>💖 YAYYYYY 💖</h1>
+        <div class="gif-container">
+            <!--   -->
+            <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnI4eTMybThneGd0bGtmdWdidnlzNzQ4OXE2bWx1a214MHJ5ZHVjaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1oNbofjfp9fH4Su5k5/giphy.gif" 
+                 alt="">
+            <p style="color:#ff69b4; margin-top:10px;"> ПИНГВИНЫ РАДЫЫ))) </p>
+        </div>
+        <div class="response-message"> ТЫ МОЯ САМАЯ ЛУЧШАЯ, МОЙ ЛУЧИК СВЕТА 😘</div>
+        <div class="small-note">❤️ I LOVE YOUU ❤️</div>
+    </div>
+
+    <script>
+        const step1 = document.getElementById('step1');
+        const step2 = document.getElementById('step2');
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+
+        let noClickCount = 0;
+        const initialSize = 1.8;
+        const initialPadding = 1;
+        const minSize = 0.1;
+
+        // 
+        const noTexts = [
+            'No 💔',
+            'Are you sure? 🥺',
+            'Really sure? 😢',
+            'Please? 💕',
+            'Last chance! 💗',
+            '🥺🥺🥺',
+            '💔'
+        ];
+
+        yesBtn.addEventListener('click', () => {
+            step1.classList.add('hidden');
+            step2.classList.remove('hidden');
+        });
+
+        noBtn.addEventListener('click', function() {
+            noClickCount++;
+            
+            let newSize = Math.max(minSize, initialSize - noClickCount * 0.3);
+            let newPadding = Math.max(0.1, initialPadding - noClickCount * 0.15);
+            
+            this.style.fontSize = newSize + 'rem';
+            this.style.padding = newPadding + 'rem ' + (newPadding * 2.5) + 'rem';
+            
+            // 
+            if (noClickCount <= noTexts.length) {
+                this.innerText = noTexts[noClickCount - 1];
+            } else {
+                this.innerText = '💔';
+            }
+
+            // 
+            if (newSize <= minSize + 0.2) {
+                this.style.opacity = '0';
+                this.style.pointerEvents = 'none'; // 
+            }
+
+            createFloatingHeart();
+        });
+
+        function createFloatingHeart() {
+            const heart = document.createElement('span');
+            heart.innerHTML = '❤️';
+            heart.style.position = 'fixed';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.top = Math.random() * 100 + '%';
+            heart.style.fontSize = Math.random() * 30 + 20 + 'px';
+            heart.style.animation = 'heartbeat 1s ease';
+            heart.style.pointerEvents = 'none';
+            heart.style.zIndex = '9999';
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
